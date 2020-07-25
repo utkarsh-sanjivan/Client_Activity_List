@@ -1,0 +1,17 @@
+.client-page-header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 120px;
+    background-color: #3c4146;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.client-page-header-title {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    color: #eef4fc;
+    line-height: 48px;
+}
