@@ -2,7 +2,6 @@ import React from 'react';
 import TableDetails from '../../components/TableDetails';
 import ClientModal from '../../components/ClientModal';
 import { formatDateString } from '../../utils/dateFormatter';
-import axios from '../../utils/axios';
 import './style.css';
 
 class ClientList extends React.PureComponent {
@@ -16,9 +15,8 @@ class ClientList extends React.PureComponent {
   }
 
   componentDidMount () {
-    axios.get('/api/clients', {})
-    .then(res => {
-      this.setState({ clientList: res.data.members.map(member => (
+    fetch(`http://localhost:3000/getClientActivityList`, { method: 'GET', }).then(res => {
+      this.setState({ clientList: res.members.map(member => (
         {
           ...member,
           region: member.tz.split('/')[0].split('_').reduce((accumulator, currentValue) => accumulator + ' ' + currentValue),

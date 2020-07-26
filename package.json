@@ -8,7 +8,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.4.2",
-    "axios": "^0.19.2",
     "gh-pages": "^3.1.0",
     "moment": "^2.27.0",
     "react": "^16.13.1",
@@ -20,7 +19,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "node mock-api/app.js ",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -41,10 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "connect-api-mocker": "^1.9.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
-  },
-  "proxy": "http://localhost:9000/api"
+  "devDependencies": {}
 }
