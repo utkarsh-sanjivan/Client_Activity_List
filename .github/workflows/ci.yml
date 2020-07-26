@@ -35,10 +35,14 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Add remote origin
+    - name: Deploy
       run: |
-        git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
-        
-    - name: Deploy to Heroku
-      run: |
-        git push heroku HEAD:master -f
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+        npm run deploy
+      env:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        github_token: ${{ secrets.TOKEN_FOR_REPO_DEPLOY }}
+        repository: 'utkarsh-sanjivan/Client_List'
