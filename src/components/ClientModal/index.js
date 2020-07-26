@@ -12,7 +12,7 @@ const ClientModal = props => {
             dataIndex: 'start_time',
             key: 'start_time',
             render: (value, record) => (
-                <div className="client-start-time-column">{value}</div>
+                <div className="client-start-time-column">{value || ''}</div>
             ),
         },
         {
@@ -20,7 +20,7 @@ const ClientModal = props => {
             dataIndex: 'end_time',
             key: 'end_time',
             render: (value, record) => (
-                <div className="client-end-time-column">{value}</div>
+                <div className="client-end-time-column">{value || ''}</div>
             ),
         },
         {
@@ -28,7 +28,7 @@ const ClientModal = props => {
             dataIndex: 'duration',
             key: 'duration',
             render: (value, record) => (
-                <div className="client-duration-column">{calculateDuration(record.start_time, record.end_time)}</div>
+                <div className="client-duration-column">{record.start_time && record.end_time? calculateDuration(record.start_time, record.end_time): ''}</div>
             ),
         },
     ];
@@ -57,7 +57,7 @@ const ClientModal = props => {
         >
             <TableDetails 
                 width={600}
-                dataSource={props.client.activity_periods}
+                dataSource={props.client.activity_periods || []}
                 columns={tableColumns}
             />
         </Modal>
