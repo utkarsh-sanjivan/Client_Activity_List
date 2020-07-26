@@ -2,6 +2,7 @@
 Client Activity List
 This application aims at displying the list of clients their last activity and all their activity over the months. This project is built with `React`, `Javascript`, `HTML`, `CSS`. 
 <hr /><br />
+
 ### Run the test for the app
 In the project directory, you can run:
 `npm run test`
@@ -20,7 +21,7 @@ To create a build of the app in the project directory, run the following command
 The code for this application is hoisted at Github in the repository [https://github.com/utkarsh-sanjivan/Client_List](https://github.com/utkarsh-sanjivan/Client_List), which is made public.
 
 ### CI/CD pipline
-This app also includes the CI/CD pipeline so whenever a pull request is generated, it is tested, build is made and then only it is deployed. This deployed code is hoisted on [https://utkarsh-sanjivan.github.io/Client_List/#/] (https://github.com/utkarsh-sanjivan/Client_List), which is open for access.
+This app also includes the CI/CD pipeline so whenever a pull request is generated, it is tested, build is made and then only it is deployed. This deployed code is hoisted on [https://utkarsh-sanjivan.github.io/Client_List/#/](https://github.com/utkarsh-sanjivan/Client_List), which is open for access.
 
 ### Eject create-react-app
 
