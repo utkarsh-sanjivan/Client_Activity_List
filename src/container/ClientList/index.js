@@ -16,7 +16,6 @@ class ClientList extends React.PureComponent {
 
   componentDidMount () {
     fetch(`http://localhost:3000/getClientActivityList`, { method: 'GET', }).then(res => {
-      debugger;
       this.setState({ clientList: res.members.map(member => (
         {
           ...member,
