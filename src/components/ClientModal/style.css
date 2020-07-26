@@ -1,0 +1,65 @@
+.ant-modal-content {
+    border: 1px #fff solid  !important;
+}
+
+.ant-modal-header {
+    background-color: #0a0a0a !important;
+}
+
+.ant-modal-body {
+    background-color: #111412 !important;
+}
+
+.client-modal-title {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: #8b8c8b;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.client-modal-sub-title {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8f9090;
+}
+
+.client-start-time-column {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #469649;
+    text-transform: none;
+}
+
+.client-end-time-column {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ed3833;
+    text-transform: none;
+}
+
+.client-duration-column {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #337ab7;
+    text-transform: none;
+}
+
+.close-icon {
+    color: #fff !important;
+    float: right;
+}
+
+.timeline-icon {
+    color: #fff !important;
+    float: left;
+    font-size: 25px;
+}

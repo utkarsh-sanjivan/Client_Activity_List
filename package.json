@@ -18,6 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "server": "node mock-api/app.js ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +36,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "connect-api-mocker": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "proxy": "http://localhost:9000/api"
 }

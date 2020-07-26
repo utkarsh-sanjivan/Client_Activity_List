@@ -15,7 +15,7 @@ function getDateString(dateString) {
 }
 
 export function formatDateString(dateString) {
-    const date = getDateString(dateString);;
+    const date = getDateString(dateString);
     const currentMonth = moment().months();
     const currentYear = moment().year();
     const dateMonth = date.months();    
@@ -34,5 +34,16 @@ export function formatDateString(dateString) {
                 else return ` ${diffMinutes} ${diffMinutes === 1? 'minute': 'minutes'} ago`;
             } else return ` ${diffHours} ${diffHours === 1? 'hour': 'hours'} ago`;
         } else return ` ${diffDays} ${diffDays === 1? 'day': 'days'} ago`; 
+    }
+}
+
+export function calculateDuration (startDateString, endDateString) {
+    const startDate = getDateString(startDateString);
+    const endDate = getDateString(endDateString);
+    const diffHours = endDate.diff(startDate, 'hour');
+    if (diffHours === 0) {
+        return `${endDate.diff(startDate, 'minutes')} minutes`;
+    } else {
+        return `${diffHours} hours`;
     }
 }

@@ -4,7 +4,7 @@ import Header from './components/Header/index';
 import ClientList from './container/ClientList/index';
 
 const Routing = props => (
-  <div>
+  <div style={{ height: '100%' }}>
     <Header />
     <HashRouter basename='/'>
       <Switch>

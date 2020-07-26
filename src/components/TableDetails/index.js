@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Empty, Skeleton } from 'antd';
+import { Table, Skeleton } from 'antd';
 import './style.css';
 
 const TableDetails = props => {
@@ -15,6 +15,7 @@ const TableDetails = props => {
         dataSource={props.dataSource}
         columns={props.columns}
         pagination={false}
+        bordered
         />}
     </div>
   );
